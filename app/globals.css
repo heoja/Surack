@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    background: #4e37af;
+    color: white;
+}
+.title{
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 0;
+    font-family: esamanru_medium;
+    font-size: 120px;
+}
+.title-sub{
+    font-family: esamanru_medium;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    font-size: 30px;
+}
+.new-body{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background: white;
+    height: 20%;
+    bottom: 0px;
+    width: 100%;
+}
+.text-box{
+    position: absolute;
+    
+    font-family: esamanru_medium;
+    background: white;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    height: auto;
+    width: auto;
+    border: 3px solid #4e37af;
+    color: #4e37af;
+    margin: 5px;
+    margin-top: 20px;
+    padding: 10px;
+}
+.navbar {
+    background: white;
+    padding: 20px;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    margin-right: 10px;
+    text-decoration: none;
+    
+}
+.food{
+    margin: 20px auto;
+    width: 200px;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+}
+@font-face {
+    font-family: 'esamanru_bold';
+    src: url('../app/fonts/esamanru\ Bold.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.img{
+    width: 5%;
+    height: auto;
+    margin: auto;
+    display: block;
+    
+}
