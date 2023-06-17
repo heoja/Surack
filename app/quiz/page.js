@@ -7,8 +7,8 @@ export default function Quiz() {
       <div>
         
 
-        <h4 className="title">quiz1</h4>
-        <p className="title-sub">다음중 진짜는?</p>
+        <h4 className="title-sub">quiz1</h4>
+        <p className="textbox-normal">다음중 진짜는?</p>
 
         {candidates.map((a, i) => {
             return(

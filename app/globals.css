@@ -15,8 +15,22 @@ body {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    padding: 30px;
     width: auto;
     font-size: 30px;
+}
+.textbox-normal{
+    font-family: esamanru_light;
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* white-space: pre; */
+    line-height: 150%;
 }
 .new-body{
     position: absolute;
@@ -27,7 +41,7 @@ body {
     bottom: 0px;
     width: 100%;
 }
-.text-box{
+.text-box-small{
     position: absolute;
     
     font-family: esamanru_medium;
@@ -54,7 +68,7 @@ body {
 .navbar a {
     margin-right: 10px;
     text-decoration: none;
-    
+    padding: 20px;
 }
 .food{
     margin: 20px auto;
@@ -66,7 +80,19 @@ body {
 }
 @font-face {
     font-family: 'esamanru_bold';
-    src: url('../app/fonts/esamanru\ Bold.ttf') format('woff');
+    src: url('./fonts/esamanru Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'esamanru_light';
+    src: url('./fonts/esamanru Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'esamanru_medium';
+    src: url('./fonts/esamanru Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
