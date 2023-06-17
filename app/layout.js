@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
           </div>
           <div className="menubar">
             <Link href="/">홈</Link>
-            <Link href="/list">List</Link>
+            <Link href="/quiz">Quiz</Link>
           </div>
         </div>{children}</body>
     </html>

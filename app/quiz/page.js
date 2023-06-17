@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function List() {
+export default function Quiz() {
     let candidates = ['허주연1', '허주연2', '허주연3']
     
     return (
