@@ -21,16 +21,51 @@ body {
 }
 .textbox-normal{
     font-family: esamanru_light;
-    
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
     font-size: 20px;
+    line-height: 200%;
+
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin-left: 5%;
+    margin-right: 5%;
+    width: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
     /* white-space: pre; */
-    line-height: 150%;
+}
+.textbox-normal::-webkit-scrollbar{
+    width:auto;
+}
+.textbox-normal::-webkit-scrollbar-thumb{
+    background: -webkit-linear-gradient(135deg,#4420d8,#8d7bd6, #4420d8);
+    border-radius: 10px;
+    width: 80%;
+}
+.textbox-normal::-webkit-scrollbar-track{
+    background: #988ad0;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.text-box-small{
+    /* position: absolute;     */
+    font-family: esamanru_medium;
+    font-size: 30px;
+    text-decoration: none;
+    color: #4e37af;
+    display: flex;
+    justify-content: center;    /*center in row*/
+    align-items: center;        /*center in column*/
+
+    border: 3px solid #4e37af;
+    background: white;
+    /* color: black; */
+    
+    height: auto;
+    width: auto;    
+    margin: 5px;
+    margin: 20px;
+    padding: 10px;
 }
 .new-body{
     position: absolute;
@@ -40,22 +75,6 @@ body {
     height: 20%;
     bottom: 0px;
     width: 100%;
-}
-.text-box-small{
-    position: absolute;    
-    font-family: esamanru_medium;
-    text-decoration: none;
-    background: white;
-    color: black;
-    font-size: 30px;
-    text-align: center;
-    height: auto;
-    width: auto;
-    border: 3px solid #4e37af;
-    color: #4e37af;
-    margin: 5px;
-    margin-top: 20px;
-    padding: 10px;
 }
 .navbar {
     /* background: white; */
@@ -130,9 +149,13 @@ body {
     font-style: normal;
 }
 .img{
-    width: 5%;
+    width: 40%;
     height: auto;
-    margin: auto;
-    display: block;
+    margin-bottom: 5%;
+    
+    /* padding: 5vh; */
+    border: 3px solid #4e37af;
+    border-radius: 20px;
+    /* display: block; */
     
 }
