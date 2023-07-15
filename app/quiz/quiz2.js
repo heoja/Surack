@@ -58,7 +58,7 @@ export default function 선택지Quiz(chapternumber){
   
   return(
     finishedQuiz?
-    <div>Quiz done</div>:
+    <div className="textbox-normal" style={{justifyContent:"center", alignItems:"center", height:"max-content"}}>Quiz done</div>:
     <div>
       
         
@@ -69,7 +69,7 @@ export default function 선택지Quiz(chapternumber){
         <h4 style={{textAlign:"right", marginRight:"30px"}}> 맞은 개수 : {score} </h4>
       
       <div>
-        <Image src = '/public/농인입니다.png' className = "quizimage" alt = ""/>
+        <img src = {image} className = "quizimage" alt = ""/>
         
       </div>
       <div className="middle">
