@@ -2,10 +2,8 @@
 
 import {useState} from "react"
 import Image from "next/image"
-import 수어이미지1 from "/public/수어이미지1.jpg"
-
-import rightsudal from "/public/rightsudal.jpg"
-import wrongsudal from "/public/wrongsudal.jpg"
+import rightsudal from '/public/suragy_happy2.png'
+import wrongsudal from "/public/suragy_sad.png"
 import {quizdataS}  from "./data"
 
 
@@ -80,7 +78,15 @@ export default function 선택지Quiz(chapternumber){
               :(<div style={{alignItems:"center", textAlign:"center", display:"inline-block"}}><input type = "button" value={option} style={{float:"left", display:"inline-block"}}/><div>{option === correctAnswer ? ("O") : ("X")}</div></div>)}
               </label>
               ):null})}
-        {checkanswer? (amIright? (<Image src = {rightsudal} className = "suragy_image" alt = ""/>) : (<Image src = {wrongsudal} className = "suragy_image" alt = ""/>))
+        {checkanswer? (amIright? 
+        (<div>
+          <Image src = {rightsudal} className = "suragy_image" alt = "" height='200'/>
+          <div>정답입니다</div>
+          </div>) : 
+          (<div>
+            <Image src = {wrongsudal} className = "suragy_image" alt = "" height='200'/>
+            <div>아쉽네요~</div>
+            </div>))
         : (<div></div>)}
       </div>
       {checkanswer ? (<div><button onClick={Nextquestion}>다음 문제</button></div>):(<div></div>)}

@@ -23,7 +23,7 @@ body {
     font-family: esamanru_light;
     font-size: 20px;
     line-height: 200%;
-        
+
     /* align-items: center; */
     /* justify-content: center; */
     
@@ -154,6 +154,7 @@ body {
     width: 40%;
     height: auto;
     margin-bottom: 5%;
+    
     
     /* padding: 5vh; */
     border: 3px solid #4e37af;
