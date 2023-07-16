@@ -89,7 +89,7 @@ export default function 선택지Quiz(chapternumber){
             </div>))
         : (<div></div>)}
       </div>
-      {checkanswer ? (<div><button onClick={Nextquestion}>다음 문제</button></div>):(<div></div>)}
+      {checkanswer ? (<div style={{float:"right"}}><button onClick={Nextquestion}>다음 문제</button></div>):(<div></div>)}
             
       </div>
   
