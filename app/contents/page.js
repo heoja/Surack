@@ -10,8 +10,8 @@ export default function Contents() {
                 marginRight:"auto", overflowY:"auto"}}>
                     <div className="textbox-normal" style={{marginLeft:"3%", marginRight:"3%", marginTop:"3%"}}>
                     <h2>· 커리큘럼</h2></div>
-                    <img src="/curriculum1.png" className="img" style={{marginLeft:"40px"}}/>
-                    <img src="/curriculum2.png" className="img" style={{marginLeft:"40px"}}/>
+                    <img src="../curriculum1.png" className="img" style={{marginLeft:"40px"}}/>
+                    <img src="../curriculum2.png" className="img" style={{marginLeft:"40px"}}/>
                     <div className="textbox-normal" style={{marginLeft:"3%", marginRight:"3%", marginTop:"3%"}}>
                     <h2>· 설명이 필요하신가요?</h2></div>
                     <div className="textbox-normal" style={{marginLeft:"3%", marginRight:"3%", marginTop:"3%"}}>
