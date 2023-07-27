@@ -1,4 +1,5 @@
 "use client";
+import './quiz.css'
 import 선택지Quiz from "./quiz2";
 
 export default function Quiz() {
