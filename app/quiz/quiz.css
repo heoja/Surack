@@ -24,3 +24,23 @@
     display: block;
 
   }
+  .bigbox{
+    font-family: esamanru_light;
+    font-size: 20px;
+    line-height: 200%;
+    
+    margin-left: auto; /* 5% */
+    margin-right: auto; /* 5% */
+    width: auto;
+    display: flex;
+
+    height: 85vh;
+    width: 95%;
+    background-color: white;
+    color:#4e37af;
+    border-radius: 20px;
+    margin-top: 1%;
+    flex-direction: column;
+    overflow-y: auto;
+
+  }

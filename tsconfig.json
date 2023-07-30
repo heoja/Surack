@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, ".next/types/app/quiz/page.js", ".next/types/app/page.js", ".next/types/app/layout.js", ".next/types/app/contents/page.js", ".next/types/app/contents/page.js", ".next/types/app/page.js", ".next/types/app/layout.js", ".next/types/app/quiz/page.js"  ],
   "exclude": [
     "node_modules"
   ]

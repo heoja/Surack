@@ -4,10 +4,10 @@ import {useState} from "react"
 import Image from "next/image"
 import rightsudal from '/public/suragy_happy2.png'
 import wrongsudal from "/public/suragy_sad.png"
-import {quizdataS}  from "./data"
+import {quizdataS}  from "./data/data"
 
 
-export default function 선택지Quiz(chapternumber){
+export default function SignToKoreanQuiz(chapternumber){
   let [activeQuestion, setActiveQuestion] = useState(0);
   const { questions } = quizdataS;
   const { question, answers, correctAnswer, image } = questions[activeQuestion];
