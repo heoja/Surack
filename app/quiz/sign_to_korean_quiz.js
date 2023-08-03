@@ -1,5 +1,7 @@
 "use client";
 
+import './quiz.css'
+
 import {useState} from "react"
 import Image from "next/image"
 import rightsudal from '/public/suragy_happy2.png'
@@ -7,7 +9,7 @@ import wrongsudal from "/public/suragy_sad.png"
 import {quizdataS}  from "./data/data"
 
 
-export default function SignToKoreanQuiz(chapternumber){
+export default function SignToKoreanQuiz(){
   let [activeQuestion, setActiveQuestion] = useState(0);
   const { questions } = quizdataS;
   const { question, answers, correctAnswer, image } = questions[activeQuestion];
@@ -67,7 +69,7 @@ export default function SignToKoreanQuiz(chapternumber){
         <h4 style={{textAlign:"right", marginRight:"30px"}}> 맞은 개수 : {score} </h4>
       
       <div>
-        <img src = {image} className = "quizimage" alt = ""/>
+        <img src = {image} className = "quizimage" alt = "퀴즈이미지"/>
         
       </div>
       <div className="middle">
