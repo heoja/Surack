@@ -7,7 +7,7 @@ export default function Quiz() {
   return (
     <div className="bigbox">
       {curriculumList.map((item) => (
-        <Link href={`/quiz/topic/${item}`}>
+        <Link key={item} href={`/quiz/${encodeURIComponent(item)}`}>
           
             <h3>{item}</h3>
           
