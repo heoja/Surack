@@ -77,7 +77,7 @@ export default function SignToKoreanQuiz(){
             return activeQuestion < 4 ? (
               <label>
               {!checkanswer?(<div style={{alignItems:"center", textAlign:"center", display:"inline-block"}}><input type = "button" onClick={handleChange} value={option} style={{display:"inline-block"}}/></div>)
-              :(<div style={{alignItems:"center", textAlign:"center", display:"inline-block"}}><input type = "button" value={option} style={{float:"left", display:"inline-block"}}/><div>{option === correctAnswer ? ("O") : ("X")}</div></div>)}
+              :(<div style={{alignItems:"center", textAlign:"center", display:"inline-block"}}><input type = "button" value={option} /><div>{option === correctAnswer ? ("O") : ("X")}</div></div>)}
               </label>
               ):null})}
         {checkanswer? (amIright? 

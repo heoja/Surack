@@ -44,3 +44,7 @@
     overflow-y: auto;
 
   }
+
+  input[type = button]{
+    display: inline-block;
+  }
