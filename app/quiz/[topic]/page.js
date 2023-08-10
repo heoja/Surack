@@ -9,15 +9,18 @@ import SignToKoreanQuiz from '../sign_to_korean_quiz'
 export default function Page() {
     const router = useRouter()
     const pathName = usePathname()
-    const searchParams = useSearchParams()
+    const [searchParams, setSearchParams] = useSearchParams()
   
     
 
-  return <div className='bigbox'>
-    <SignToKoreanQuiz/>
-    {/* <div>{decodeURIComponent(pathName)}</div>
+  return <div className='bigbox' style={{overflow:"hidden"}}>
     
-    <button type="button" onClick={() => router.back()}>뒤로 가기</button> */}
+    <SignToKoreanQuiz/>
+    
+      
+    {/* <div>{decodeURIComponent(pathName)}</div> */}
+    
+    {/* <button type="button" onClick={() => router.back()}>뒤로 가기</button> */}
     </div>
 
 }
