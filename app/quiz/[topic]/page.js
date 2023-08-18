@@ -9,13 +9,14 @@ import SignToKoreanQuiz from '../sign_to_korean_quiz'
 export default function Page() {
     const router = useRouter()
     const pathName = usePathname()
-    const [searchParams, setSearchParams] = useSearchParams()
-  
+    const searchParams = useSearchParams()
+    // const search = searchParams.get("topic")
     
 
   return <div className='bigbox' style={{overflow:"hidden"}}>
+   
     
-    <SignToKoreanQuiz/>
+    <SignToKoreanQuiz item={decodeURIComponent(pathName)}/>
     
       
     {/* <div>{decodeURIComponent(pathName)}</div> */}

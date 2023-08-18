@@ -12,7 +12,9 @@ export default function Quiz() {
           <div key={item} className='circle' style={{}}/>
 
           
-          <Link key={item} href={`/quiz/${encodeURIComponent(item)}`} style={{marginLeft:"10px", marginRight:"10px"}}>
+          <Link key={item} href={{pathname:`/quiz/${encodeURIComponent(item)}`, query:{topic:item}}} 
+          style={{marginLeft:"10px", marginRight:"10px"}}
+          as={`/quiz/${encodeURIComponent(item)}`} >
             
               <h3>{item}</h3>
             

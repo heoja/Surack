@@ -9,18 +9,22 @@ import wrongsudal from "/public/suragy_sad.png"
 import {quizdataS}  from "./data/data"
 
 
-export default function SignToKoreanQuiz(){
+
+
+export default function SignToKoreanQuiz({item}){
   let [activeQuestion, setActiveQuestion] = useState(0);
   const { questions } = quizdataS;
   const { question, answers, correctAnswer, image } = questions[activeQuestion];
+  const topicQuestions = questions.filter(qList => qList.topic.includes(item));
+  
   const [checkanswer, setcheckanswer] = useState(false);
   const [amIright, setamIright] = useState(false);
   const [Chosenanswer, setChosenanswer] = useState('')
   const [score, setscore] = useState(0)
-  let chapter = "ch. 1:\u00a0\u00a0\u00a0\u00a0\u00a0"
-  let chaptername = "첫 인사하기"
- 
-
+  // let chapter = "ch. 1:\u00a0\u00a0\u00a0\u00a0\u00a0"
+  // let chaptername = "첫 인사하기"
+  var topic = item.substr(6)
+  console.log(topicQuestions);
 
   const [finishedQuiz, setFinishedQuiz] = useState(false);
 
@@ -43,26 +47,27 @@ export default function SignToKoreanQuiz(){
   const handleAnswer = (a) => {
     const isCorrect = a === correctAnswer
     if(isCorrect){
-      console.log("맞았다")
+      // console.log("맞았다")
       setcheckanswer(true)
       setamIright(true)
       setscore(score+1)
     }
-    else{console.log("틀렸다")
-    setcheckanswer(true)
-    setamIright(false)};
+    else{
+      // console.log("틀렸다")
+      setcheckanswer(true)
+      setamIright(false)};
   }
 
  
   
   
   return(
-    finishedQuiz?
-    <div className="textbox-normal" style={{justifyContent:"center", alignItems:"center", height:"max-content"}}>Quiz done</div>:
-    <div>
+    finishedQuiz ?
+    <div className="textbox-normal" style={{justifyContent:"center", alignItems:"center", height:"max-content"}}>Quiz done</div>
+    : <div>
       
         
-          <h4 className = "quizhead">{chapter}{chaptername}</h4>
+          <h4 className = "quizhead" >{"💚\u00a0\u00a0"}{topic}{"\u00a0\u00a0💚"}</h4>
       
       
         <h3 style={{textAlign:"center"}}>{activeQuestion+ 1}번 문제: {activeQuestion < 6 ? questions[activeQuestion].question : null}</h3>
@@ -91,8 +96,13 @@ export default function SignToKoreanQuiz(){
         {answers.map((option, index)=>{
             return activeQuestion < 6 ? (
               <label>
-              {!checkanswer?(<div style={{alignItems:"center", textAlign:"center", display:"inline-block"}}><input type = "button" onClick={handleChange} value={option} style={{display:"inline-block"}}/></div>)
-              :(<div style={{alignItems:"center", textAlign:"center", display:"inline-block"}}><input type = "button" value={option} /><div >{option === correctAnswer ? ("O") : ("X")}</div></div>)}
+              {!checkanswer?
+              (<div style={{alignItems:"center", textAlign:"center", display:"inline-block"}}>
+                <input type = "button" onClick={handleChange} value={option} style={{display:"inline-block"}}/></div>)
+              :(<div style={{alignItems:"center", textAlign:"center", display:"inline-block"}}>
+                <input type = "button" value={option} />
+                <div >{option === correctAnswer ? ("O") : ("X")}</div>
+                </div>)}
               </label>
               ):null})}
         
