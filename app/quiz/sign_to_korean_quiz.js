@@ -68,9 +68,18 @@ export default function SignToKoreanQuiz({item}){
         
           <h4 className = "quizhead" >{"💚\u00a0\u00a0"}{topicName}{"\u00a0\u00a0💚"}</h4>
       
-      
-        <h3 style={{textAlign:"center"}}>{activeQuestion+ 1}번 문제: {activeQuestion < questionLength ? questions[activeQuestion].question : null}</h3>
-        <h4 style={{textAlign:"right", marginRight:"30px"}}> 맞은 개수 : {score} </h4>
+        <div style={{alignItems:"center", justifyItems:"center", flexDirection:"row", display:"flex"}}>
+          <div style={{flex:"1", marginLeft:"auto", marginRight:"auto", textAlign:"center", fontSize:"20px"}}></div>
+          <div style={{flex:"1", marginLeft:"auto", marginRight:"auto", textAlign:"center", fontWeight:"bold", fontSize:"22px"}}>
+            {activeQuestion+ 1}번 문제: {activeQuestion < questionLength ? questions[activeQuestion].question : null}
+          </div>
+          <div style={{flex:"1", marginLeft:"auto", marginRight:"25px", textAlign:"end"}}>
+          맞은 개수 : {score}
+          </div>
+        </div>
+        <div style={{height:"30px"}}></div>
+
+        
       
       <div className='middle' style={{alignItems:"center", justifyItems:"center", flexDirection:"row", display:"flex"}}>
         {checkanswer? (amIright? 
