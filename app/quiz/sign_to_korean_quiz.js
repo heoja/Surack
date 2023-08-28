@@ -14,8 +14,8 @@ import {quizdataS}  from "./data/data"
 export default function SignToKoreanQuiz({item}){
   let [activeQuestion, setActiveQuestion] = useState(0);
   const { questions } = quizdataS;
-  const { question, answers, correctAnswer, image } = questions[activeQuestion];
-  const topicQuestions = questions.filter(qList => qList.topic.includes(item));
+  const { topic, question, answers, correctAnswer, image } = questions[activeQuestion];
+  const topicQuestions = questions.filter(qList => qList.topicName.includes(item));
   
   const [checkanswer, setcheckanswer] = useState(false);
   const [amIright, setamIright] = useState(false);
@@ -23,7 +23,7 @@ export default function SignToKoreanQuiz({item}){
   const [score, setscore] = useState(0)
   // let chapter = "ch. 1:\u00a0\u00a0\u00a0\u00a0\u00a0"
   // let chaptername = "첫 인사하기"
-  var topic = item.substr(6)
+  var topicName = item.substr(6)
   console.log(topicQuestions);
 
   const [finishedQuiz, setFinishedQuiz] = useState(false);
@@ -67,7 +67,7 @@ export default function SignToKoreanQuiz({item}){
     : <div>
       
         
-          <h4 className = "quizhead" >{"💚\u00a0\u00a0"}{topic}{"\u00a0\u00a0💚"}</h4>
+          <h4 className = "quizhead" >{"💚\u00a0\u00a0"}{topicName}{"\u00a0\u00a0💚"}</h4>
       
       
         <h3 style={{textAlign:"center"}}>{activeQuestion+ 1}번 문제: {activeQuestion < 6 ? questions[activeQuestion].question : null}</h3>
