@@ -17,6 +17,7 @@ export default function SignToKoreanQuiz({item}){
   var topicName = item.substr(6)
   const topicQuestions = questions.filter(qList => qList.topic.includes(topicName));
   const { topic, question, answers, correctAnswer, image } = topicQuestions[activeQuestion];
+  const questionLength = topicQuestions.length;
   
   const [checkanswer, setcheckanswer] = useState(false);
   const [amIright, setamIright] = useState(false);
@@ -34,7 +35,7 @@ export default function SignToKoreanQuiz({item}){
   }
 
   const Nextquestion = () =>{
-    if (activeQuestion === 6-1 && checkanswer) {
+    if (activeQuestion === questionLength-1 && checkanswer) {
       setcheckanswer(false);
       
       setFinishedQuiz(true);
@@ -70,7 +71,7 @@ export default function SignToKoreanQuiz({item}){
           <h4 className = "quizhead" >{"💚\u00a0\u00a0"}{topicName}{"\u00a0\u00a0💚"}</h4>
       
       
-        <h3 style={{textAlign:"center"}}>{activeQuestion+ 1}번 문제: {activeQuestion < 6 ? questions[activeQuestion].question : null}</h3>
+        <h3 style={{textAlign:"center"}}>{activeQuestion+ 1}번 문제: {activeQuestion < questionLength ? questions[activeQuestion].question : null}</h3>
         <h4 style={{textAlign:"right", marginRight:"30px"}}> 맞은 개수 : {score} </h4>
       
       <div className='middle' style={{alignItems:"center", justifyItems:"center", flexDirection:"row", display:"flex"}}>
@@ -94,7 +95,7 @@ export default function SignToKoreanQuiz({item}){
 
       <div className="middle">
         {answers.map((option, index)=>{
-            return activeQuestion < 6 ? (
+            return activeQuestion < questionLength ? (
               <label>
               {!checkanswer?
               (<div style={{alignItems:"center", textAlign:"center", display:"inline-block"}}>

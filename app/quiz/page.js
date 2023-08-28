@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Quiz() {
   return (
     <div className="bigbox">
-      <div style={{margin:"10px"}}>첫인사 하기 이외 컨텐츠는 준비 중입니다.</div>
+      
       {curriculumList.map((item) => (
         <div style={{alignItems:"center", justifyItems:"center", flexDirection:"row", display:"flex", margin:"10px"}}>
           <div key={item} className='circle' style={{}}/>
@@ -21,6 +21,8 @@ export default function Quiz() {
           </Link>
         </div>
       ))}
+
+      <div style={{margin:"10px"}}>컨텐츠 준비 중입니다.</div>
     </div>
   );
 }
