@@ -1,13 +1,11 @@
 "use client";
+import Image from "next/image"
 
 import './quiz.css'
-
 import {useState} from "react"
-import Image from "next/image"
 import rightsudal from '/public/suragy_happy2.png'
 import wrongsudal from "/public/suragy_sad.png"
 import {quizdataS}  from "./data/data"
-
 
 
 
@@ -90,7 +88,7 @@ export default function SignToKoreanQuiz({item}){
           <Image src = {image} className = "quizimage" alt = "퀴즈이미지" width={100} height={100} />
         </div>
 
-        {checkanswer ? (<div style={{float:"right", flex:"1"}}><button onClick={Nextquestion}>다음 문제</button></div>):(<div></div>)}
+        {checkanswer ? (<div style={{float:"right", flex:"1"}}><button className="btn" onClick={Nextquestion}>다음 문제</button></div>):(<div></div>)}
       </div>
 
       <div className="middle">

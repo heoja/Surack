@@ -47,7 +47,54 @@
   }
 
   input[type = button]{
+    font-size: 15px;
     display: inline-block;
+    background-color: #4e37af;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 25px;
+    font-family: esamanru_light;
+    text-decoration: none;
+    margin: 10px 3px;
+  }
+  input[type = button]:hover{
+    font-size: 15px;
+    display: inline-block;
+    background-color: #dd1dca;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 25px;
+    font-family: esamanru_light;
+    text-decoration: none;
+    margin: 10px 3px;
+    cursor: pointer;
+  }
+
+  .btn{
+    font-size: 13px;
+    display: inline-block;
+    background-color: #4e37af;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 25px;
+    font-family: esamanru_light;
+    text-decoration: none;
+  }
+
+  .btn:hover{
+    font-size: 13px;
+    display: inline-block;
+    background-color: #dd1dca;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 25px;
+    font-family: esamanru_light;
+    text-decoration: none;
+    cursor: pointer;
   }
   .circle{
     width: 60px;
@@ -55,5 +102,11 @@
     border-radius: 50%;
     background-color: #fff131;
     margin: 10px;
-
+  }
+  .circleImage{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff131;
+    margin: 10px;
   }
