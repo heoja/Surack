@@ -14,8 +14,9 @@ import {quizdataS}  from "./data/data"
 export default function SignToKoreanQuiz({item}){
   let [activeQuestion, setActiveQuestion] = useState(0);
   const { questions } = quizdataS;
-  const { topic, question, answers, correctAnswer, image } = questions[activeQuestion];
-  const topicQuestions = questions.filter(qList => qList.topicName.includes(item));
+  var topicName = item.substr(6)
+  const topicQuestions = questions.filter(qList => qList.topic.includes(topicName));
+  const { topic, question, answers, correctAnswer, image } = topicQuestions[activeQuestion];
   
   const [checkanswer, setcheckanswer] = useState(false);
   const [amIright, setamIright] = useState(false);
@@ -23,7 +24,6 @@ export default function SignToKoreanQuiz({item}){
   const [score, setscore] = useState(0)
   // let chapter = "ch. 1:\u00a0\u00a0\u00a0\u00a0\u00a0"
   // let chaptername = "첫 인사하기"
-  var topicName = item.substr(6)
   console.log(topicQuestions);
 
   const [finishedQuiz, setFinishedQuiz] = useState(false);

@@ -51,5 +51,13 @@ export const quizdataS = {
       correctAnswer: '무엇',
       image: '/무엇.GIF',
     },
+    {
+      id: 7,
+      topic: '우리 가족',
+      question: '제시된 수어의 올바른 뜻을 고르세요',
+      answers: ['1', '22', '3', '4'],
+      correctAnswer: '22',
+      image: '/22.GIF',
+    }
   ],
 };
