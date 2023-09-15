@@ -1,6 +1,6 @@
 
 
-export const curriculumList = ['첫인사 하기', '우리 가족' ];
+export const curriculumList = ['지숫자','첫인사 하기', '우리 가족' ];
 // [1,2,3]
 // '학교에서', 
 // '요일과 시간 묻기', '취미와 취향', '길 찾기와 지역','날씨 묻고 답하기', 
